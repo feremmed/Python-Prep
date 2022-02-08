@@ -2,7 +2,7 @@
 
 # Introducción a la Programación
 
-chicha candela lalala
+el quirquincho cascarilla se empacho con sopa y pilla
 
 ## ¿Qué es la Programación?
 
