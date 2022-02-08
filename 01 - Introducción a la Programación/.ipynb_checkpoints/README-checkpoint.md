@@ -2,7 +2,7 @@
 
 # Introducción a la Programación
 
-el quirquincho cascarilla se empacho con sopa y pilla
+el quirquincho cascarilla se empacho con sopa y pilla, y a la sala de la villa
 
 ## ¿Qué es la Programación?
 
