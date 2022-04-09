@@ -33,7 +33,7 @@ type(a)
 # In[2]:
 
 
-mi_nombre = 'juan carlos perez'
+mi_nombre = 'Emma'
 
 
 # 5) Crear una variable que contenga un número complejo
@@ -44,6 +44,8 @@ mi_nombre = 'juan carlos perez'
 n_complejo = 5 + 5j
 
 
+mi_comp = 7 + 3j
+
 # 6) Mostrar el tipo de dato de la variable crada en el punto 5
 
 # In[4]:
@@ -51,6 +53,7 @@ n_complejo = 5 + 5j
 
 type(n_complejo)
 
+print(type(mi_comp))
 
 # 7) Crear una variable que contenga el valor del número Pi redondeado a 4 decimales
 
@@ -59,6 +62,7 @@ type(n_complejo)
 
 pi = 3.1416
 
+print(round(pi, 2))
 
 # 8) Crear una variable que contenga el valor 'True' y otra que contenga el valor True. ¿Se trata de lo mismo?
 
@@ -68,6 +72,29 @@ pi = 3.1416
 var1 = 'True'
 var2 = True
 
+print(type(var1))
+
+print(type(var2))
+
+var3 = '3.8'
+var4 = 4
+print(var3 + var4)
+# error por incompatibilidad de tipos de datos
+
+print(float(var3) + float(var4))
+
+var3 = 3.8
+var4 = 4
+print(int(var3) + int(var4))
+
+var3 = 3.8
+var4 = 4
+print(str(var3) + str(var4))
+
+var3 = '3,8'
+var4 = 4
+print(var3.replace(',','.'))
+# cambiar coma por punto
 
 # 9) Imprimir el tipo de dato correspondientes a las variables creadas en el punto 9
 
@@ -239,4 +266,36 @@ str(2) + str('2')
 var1 = 'este texto se repite '
 var2 = 3
 print(var1 * var2 + str(var2) + ' veces')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
