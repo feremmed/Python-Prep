@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+
+prueba 1
+
 # ## Flujos de Control
 
 # 1) Crear una variable que contenga un elemento del conjunto de números enteros y luego imprimir por pantalla si es mayor o menor a cero
@@ -34,12 +37,21 @@ else:
 
 # In[7]:
 
+a = 8
+if(a % 2 == 0):
+    print(a, 'es un número par')
+else:
+    print(a, 'es un número impar')
+
+
 
 for i in range(1, 21):
     if i % 2 == 0:
         print('El número ', str(i), ' es par')
     else:
         print('El número ', str(i), ' es impar')
+
+# del(a) borra el espacio de memoria en 'a'
 
 
 # 4) En un ciclo for mostrar para los valores entre 0 y 5 el resultado de elevarlo a la potencia igual a 3
@@ -79,6 +91,90 @@ if (type(n) == int):
         print('La variable no es mayor a cero')
 else:
     print('La variable no es un entero')
+# Resuelto
+# El factorial es 120
+
+a = 8
+if (a > 0):
+    pass
+else:
+    print('La variable debe ser mayor a cero')
+# nada porque True y pass
+
+a = -2
+if (a > 0):
+    pass
+else:
+    print('La variable debe ser mayor a cero')
+# La variable debe ser mayor a cero
+
+
+a = '-2'
+if (a > 0):
+    pass
+else:
+    print('La variable debe ser mayor a cero')
+# TypeError porque str
+
+
+a = -2
+
+if (type(a) == int):
+    if (a > 0):
+        pass
+    else:
+       print('La variable debe ser mayor a cero')
+else:
+    print('La variable debe ser un número entero')
+# No falla porque ahora valida int vs str
+#'La variable debe ser mayor a cero'
+
+
+
+a = '-2'
+
+if (a > 0):
+    print(1)
+else:
+    print(2)
+# Error porque str
+
+# agregando {and} deberán cumplirse ambas condiciones
+if ((a > 0) and (type(a) == int)):
+    pass
+else:
+    print('La variable debe ser un número entero mayor a cero')
+# Error porque pregunta mayor que antes que el tipo de dato
+
+
+if ((type(a) == int) and (a > 0)):
+    pass
+else:
+    print('La variable debe ser un número entero mayor a cero')
+# No error porque pregunta tipo antes que mayor que
+
+### Osea que; dependiendo del orden de consulta, fallará o no.
+
+a = 8
+
+factorial =1
+if (type(a) == int):
+    if (a > 0):
+        a_original = a
+        while(a > 1):
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

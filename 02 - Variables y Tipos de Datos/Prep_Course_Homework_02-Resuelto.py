@@ -196,14 +196,24 @@ print(var1 + var2)
 
 
 2 == '2'
-
+# False
 
 # 21) Utilizar las funciones de cambio de tipo de dato, para que la validación del punto 20 resulte verdadera
 
 # In[11]:
 
 
+str(2) == '2'
+# True
+
+str(2) == int('2')
+# False
+
 2 == int('2')
+# True
+
+type(2 == int('2'))
+# bool
 
 
 # 22) ¿Por qué arroja error el siguiente cambio de tipo de datos? a = float('3,8')
@@ -211,13 +221,19 @@ print(var1 + var2)
 # In[12]:
 
 
-a = float('3,8')
-
+a = '3,8'
+# error por uso de coma, decimales se exresan con punto
+a = a.replace(',','.')
+a = float(a)
 
 # 23) Crear una variable con el valor 3, y utilizar el operador '-=' para modificar su contenido
 
 # In[15]:
 
+
+a = -3
+a = a =1
+#resume la acción en:
 
 a = -3
 a -= 1
@@ -230,6 +246,18 @@ print(a)
 
 
 1 << 2
+# 4
+
+1 << 3
+# 8
+
+n = 1
+8 << n
+8 * (2 ** n)
+
+n = 1
+8 >> n
+8 / (2 ** n)
 
 
 # 25) Realizar la operación 2 + '2' ¿Por qué no está permitido? ¿Si los dos operandos serían del mismo tipo, siempre arrojaría el mismo resultado?
