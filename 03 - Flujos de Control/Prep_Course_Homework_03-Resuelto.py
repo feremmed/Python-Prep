@@ -8,10 +8,14 @@
 # In[4]:
 
 
+
+chicha candela 6
+
+
 a = 10
 if (a < 0):
     print('La variable es menor a cero')
-elif (a > 0): 
+elif (a > 0):
     print('La varaible es mayor a cero')
 else:
     print('La variable es igual a cero')
@@ -79,7 +83,7 @@ if (type(n) == int):
         print('La variable no es mayor a cero')
 else:
     print('La variable no es un entero')
-    
+
 
 
 # 7) Crear un ciclo for dentro de un ciclo while
