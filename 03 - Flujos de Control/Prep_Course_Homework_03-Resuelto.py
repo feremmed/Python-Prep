@@ -8,10 +8,6 @@
 # In[4]:
 
 
-
-chicha candela 6
-
-
 a = 10
 if (a < 0):
     print('La variable es menor a cero')
