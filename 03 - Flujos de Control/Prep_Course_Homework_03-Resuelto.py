@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# ULTIMO cambio posta
 
-prueba 1
 
 # ## Flujos de Control
 
@@ -165,19 +165,6 @@ if (type(a) == int):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 # 7) Crear un ciclo for dentro de un ciclo while
 
 # In[38]:
@@ -189,6 +176,11 @@ while(n < 5):
     for i in range(1,n):
         print('Ciclo while nro ' + str(n))
         print('Ciclo for nro ' + str(i))
+
+
+
+
+
 
 
 # 8) Crear un ciclo while dentro de un ciclo for
@@ -221,6 +213,9 @@ while (n < tope_rango):
     else:
         primo = True
     n += 1
+
+
+
 
 
 # 10) ¿Se puede mejorar el proceso del punto 9? Utilizar las sentencias break y/ó continue para tal fin
