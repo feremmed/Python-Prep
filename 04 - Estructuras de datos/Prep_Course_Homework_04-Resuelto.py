@@ -9,6 +9,7 @@
 
 
 lis = ['Buenos Aires','Brasilia','Asunción','Montevideo','Santiago','Lima','Caracas','Bogotá']
+print(lis[1:4])
 print(lis)
 
 
@@ -50,7 +51,7 @@ print(lis[2:])
 
 
 print(lis[:4])
-    
+
 
 
 # 7) Agregar una ciudad más a la lista que ya exista y otra que no ¿Arroja algún tipo de error?
@@ -92,9 +93,44 @@ print(lis)
 # In[22]:
 
 
-lis.extend(['Madrid','Roma','Bruselas'])
+lis1 = ['manzana', 'pera', 'naranja']
+lis2 = ['melon', 'kiwi', 'sandía']
+
+lis1.extend(lis2)
+
+# ['manzana', 'pera', 'naranja', 'melon', 'kiwi', 'sandía']
+
+lis1.append(lis2)
+
+# ['manzana', 'pera', 'naranja', ['melon', 'kiwi', 'sandía']]
+
+lis1[3]
+# ['melon', 'kiwi', 'sandía']]
+
+lis1[3][1]
+# 'kiwi'
+
+lis1.sort()
+print(lis1)
+# ['kiwi', 'manzana', 'melon', 'naranja', 'pera', 'sandía']
+
+lis1 = ['1',9,7,'3']
+
+lis1[0] = int (lis1[0])
+
+lis1[3] = int (lis1[3])
+
+lis1
+#[1,3,7,9]
+
+
+lis2 = ['Madrid','Roma','Bruselas']
+lis.extend(lis2)
 print(lis)
 
+lis.extend(['Madrid','Roma','Bruselas'])
+print(lis)
+# ['Buenos Aires', 'Brasilia', 'Asunción', 'Quito', 'Montevideo', 'Santiago', 'Lima', 'Caracas', 'Bogotá', 'Ciudad de Méjico', 'Montevideo', 'Madrid', 'Roma', 'Bruselas']
 
 # 10) Encontrar el índice de la ciudad que en el punto 7 agregamos duplicada. ¿Se nota alguna particularidad?
 
@@ -107,6 +143,13 @@ print(lis.index('Montevideo'))
 # 11) ¿Qué pasa si se busca un elemento que no existe?
 
 # In[24]:
+
+'París' in lis
+# False
+# Consulta de existencia
+
+if ('París' in lis):
+    print(lis.index('París'))
 
 
 print(lis.index('París'))
@@ -130,7 +173,11 @@ print(lis)
 
 # In[27]:
 
+lis.sort(reverse=True)
+# Ordena alfabéticamente de reversa
+lis
 
+# "remove" no retiene el valor
 lis.remove('Buenos Aires')
 
 
@@ -138,7 +185,7 @@ lis.remove('Buenos Aires')
 
 # In[28]:
 
-
+# "pop" retiene el valor
 ultimo = lis.pop()
 print(ultimo)
 
@@ -159,6 +206,10 @@ print(lis * 4)
 tup = (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20)
 print(type(tup))
 print(tup)
+
+
+for i in range(1,21):
+    print (i)
 
 
 # 17) Imprimir desde el índice 10 al 15 de la tupla
@@ -183,6 +234,9 @@ print(30 in tup)
 # In[48]:
 
 
+not('Quito' in lis)
+
+
 elemento = 'París'
 if (not(elemento in lis)):
     lis.append(elemento)
@@ -194,6 +248,9 @@ else:
 # 20) Mostrar la cantidad de veces que se encuentra un elemento específico dentro de la tupla y de la lista
 
 # In[51]:
+
+
+lis.count('Montevideo')
 
 
 print(tup.count(10))
@@ -225,8 +282,8 @@ print(v3)
 # In[57]:
 
 
-dicc = {  'Ciudad': lis, 
-'País': ['Brasil','Paraguay','Ecuador','Uruguay','Chile','Perú','Venezuela','Colombia','Méjico','Uruguay','España','Italia','Francia'], 
+dicc = {  'Ciudad': lis,
+'País': ['Brasil','Paraguay','Ecuador','Uruguay','Chile','Perú','Venezuela','Colombia','Méjico','Uruguay','España','Italia','Francia'],
 'Continente' : ['América','América','América','América','América','América','América','América','América','América','Europa','Europa','Europa']}
 
 

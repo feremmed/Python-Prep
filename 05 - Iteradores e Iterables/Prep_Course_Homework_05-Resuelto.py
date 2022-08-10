@@ -1,11 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Iteradores e iterables
-
 # 1) A partir de una lista vacía, utilizar un ciclo while para cargar allí números negativos del -15 al -1
 
 # In[1]:
+
+lista = []
+for elemento in range(-15,0):
+    lista.append(elemento)
+
 
 
 lista = []
@@ -20,6 +23,15 @@ print(lista)
 
 # In[3]:
 
+lista [0] % 2
+
+
+i = 0
+while(i < len(lista)):
+    if (lista[i] % 2 == 0):
+        print('el número', lista[i], 'es par')
+    i += 1
+
 
 n = 0
 while (n < len(lista)):
@@ -27,6 +39,11 @@ while (n < len(lista)):
         print(lista[n])
     n += 1
 
+n = len(lista) - 1
+while (n >= 0):
+    if (lista[n] % 2 == 0):
+        print(lista[n])
+    n -= 1
 
 # 3) Resolver el punto anterior sin utilizar un ciclo while
 
@@ -75,6 +92,22 @@ while(n <= 20):
 print(lista)
 
 
+
+
+aux = 1
+while (aux <= 20):
+    if (not(aux in lista)):
+        #lista.append(aux)
+        lista.insert((aux - 1), aux)
+    aux += 1
+
+
+for aux in range (1, 21):
+    if (not(aux in lista)):
+    lista.insert((aux - 1), aux)
+
+
+
 # 7) La sucesión de Fibonacci es un listado de números que sigue la fórmula: <br>
 # n<sub>0</sub> = 0<br>
 # n<sub>1</sub> = 1<br>
@@ -107,7 +140,7 @@ sum(fibo)
 # n<sub>i-3</sub> / n<sub>i-2</sub><br>
 # n<sub>i-4</sub> / n<sub>i-3</sub><br>
 # n<sub>i-5</sub> / n<sub>i-4</sub><br>
-#  
+#
 
 # In[38]:
 
@@ -136,14 +169,14 @@ for i, c in enumerate(cadena):
 # In[40]:
 
 
-dicc = {  'Ciudad': ['Buenos Aires','Caracas','Bogotá','Lisboa','Roma'], 
-'País': ['Argentina','Venezuela','Colombia','Portugal','Italia'], 
-'Continente' : ['América','América','América','Europa','Europa']}
+dicc = {  'Ciudad'     : ['Buenos Aires','Caracas','Bogotá','Lisboa','Roma'],
+          'País'  : ['Argentina','Venezuela','Colombia','Portugal','Italia'],
+          'Continente' : ['América','América','América','Europa','Europa']}
 for i in dicc:
     print(i)
 
 
-# 12) Convertir en una lista la variable "cadena" del punto 10 y luego recorrerla con un iterador 
+# 12) Convertir en una lista la variable "cadena" del punto 10 y luego recorrerla con un iterador
 
 # In[41]:
 
@@ -159,6 +192,23 @@ print(type(cadena))
 
 recorre = iter(cadena)
 largo = len(cadena)
+for i in range(0, largo):
+    print(next(recorre))
+
+
+cadena = list(cadena)
+print(type(cadena))
+# convertir en lista
+
+recorre = iter(cadena)
+# puntero iterable
+
+next(recorre)
+# puntero manual
+
+largo = len(cadena)
+# para ponerle fin a la iteración según el largo de la misma
+
 for i in range(0, largo):
     print(next(recorre))
 
@@ -222,4 +272,38 @@ for indice, elemento in enumerate(lis):
     if (type(elemento) != list):
         lis[indice]=[elemento]
 print(lis)
+
+
+a = [1,2,3]
+def func_ejemplo(b):
+    b.append(4)
+    return b
+
+func_ejemplo(a)
+print(a)
+
+
+x=10
+def fune(s):
+    s=1
+    return s
+
+fune(x)
+print(x)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+memlayout.com
 

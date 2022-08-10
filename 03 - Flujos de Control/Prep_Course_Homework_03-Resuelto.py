@@ -215,12 +215,32 @@ while (n < tope_rango):
     n += 1
 
 
+for nro in range(0, 31):
+    es_primo = True
+    for i in range(2, nro):
+        if (nro % i == 0):
+            es_primo = False
+    if (es_primo):
+        print(nro, 'es primo')
+
 
 
 
 # 10) ¿Se puede mejorar el proceso del punto 9? Utilizar las sentencias break y/ó continue para tal fin
 
 # In[55]:
+
+cantidad_ciclos = 0
+for nro in range(0, 31):
+    es_primo = True
+    for i in range(2, nro):
+        cantidad_ciclos += 1
+        if (nro % i == 0):
+            es_primo = False
+            #break
+    if (es_primo):
+        print(nro, 'es primo')
+print('Cantidad ciclos:' ,cantidad_ciclos)
 
 
 n = 0
@@ -283,6 +303,18 @@ print('Se optimizó a un ' + str(ciclos_con_break/ciclos_sin_break) + '% de cicl
 
 # In[58]:
 
+cantidad_ciclos = 0
+for nro in range(0, 100):
+    es_primo = True
+    for i in range(2, nro):
+        cantidad_ciclos += 1
+        if (nro % i == 0):
+            es_primo = False
+            break
+    if (es_primo):
+        print(nro, 'es primo')
+print('Cantidad ciclos:' ,cantidad_ciclos)
+
 
 tope_rango=100
 ciclos_sin_break = 0
@@ -338,7 +370,8 @@ while(n <= 300):
 # 14) Utilizar la función **input()** que permite hacer ingresos por teclado, para encontrar números primos y dar la opción al usario de buscar el siguiente
 
 # In[73]:
-
+f = input('Ingrese el valor')
+print(f)
 
 n = 1
 sigue = 1

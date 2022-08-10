@@ -3,6 +3,7 @@
 
 # ## Manejo de errores
 
+
 # 1) Con la clase creada en el módulo 7, tener en cuenta diferentes casos en que el código pudiera arrojar error. Por ejemplo, en la creación del objeto recibimos una lista de números enteros pero ¿qué pasa si se envía otro tipo de dato?
 
 # In[1]:
@@ -61,7 +62,7 @@ h1.conversion_grados('celsius','farenheit')
 # Creacion del objeto incorrecta<br>
 # Creacion correcta del objeto<br>
 # Metodo valor_modal()<br>
-# 
+#
 # Se puede usar "raise ValueError()" en la creación de la clase para verificar el error. Investigar sobre esta funcionalidad.
 
 # In[9]:
@@ -74,7 +75,7 @@ import unittest
 
 
 class ProbandoMiClase(unittest.TestCase):
-    
+
     def test_crear_objeto1(self):
         param = 'hola'
         self.assertRaises(ValueError, h.Herramientas, param)

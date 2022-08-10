@@ -2,7 +2,7 @@ class Herramientas:
     def __init__(self, lista_numeros):
         if (type(lista_numeros) != list):
             self.lista = [0]
-            raise ValueError('Se ha creado con un elemento 0. Se esperaba una lista de núemeros enteros')  
+            raise ValueError('Se ha creado con un elemento 0. Se esperaba una lista de núemeros enteros')
         else:
             self.lista = lista_numeros
 
@@ -25,7 +25,7 @@ class Herramientas:
         for i in self.lista:
             lista_conversion.append(self.__conversion_grados(i, origen, destino))
         return lista_conversion
-    
+
     def factorial(self):
         lista_factorial = []
         for i in self.lista:

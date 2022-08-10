@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+ !/usr/bin/env python
 # coding: utf-8
 
 # ## Funciones
@@ -6,6 +6,16 @@
 # 1) Crear una función que reciba un número como parámetro y devuelva si True si es primo y False si no lo es
 
 # In[1]:
+
+
+
+def verifica_primo(nro):
+    es_primo = True
+    for i in range(2, int(nro / 2) + 1 ):
+        if nro % i == 0:
+            es_primo = False
+            break
+    return es_primo
 
 
 def verifica_primo(nro):
@@ -20,6 +30,23 @@ def verifica_primo(nro):
 # 2) Utilizando la función del punto 1, realizar otra función que reciba de parámetro una lista de números y devuelva sólo aquellos que son primos en otra lista
 
 # In[25]:
+
+
+lista1 = list(range(100,301))
+lista2 = []
+for elemento in lista1:
+    if (verifica_primo(elemento)):
+        lista2.append(elemento)
+
+def crea_lista_primos(lista_valores):
+    lista_primos = []
+    for elemento in lista_valores:
+        if (verifica_primo(elemento)):
+            lista_primos.append(elemento)
+    return lista_primos
+
+
+lista2 = (crea_lista_primos(list(range(10,21)))
 
 
 def extrae_primos_de_lista(lista):
@@ -127,7 +154,7 @@ print('El valor modal es', moda, 'y se repite', repite, 'veces.')
 # Fórmula 1	: (°C × 9/5) + 32 = °F<br>
 # Fórmula 2	: °C + 273.15 = °K<br>
 # Debe recibir 3 parámetros: el valor, la medida de orígen y la medida de destino
-# 
+#
 
 # In[56]:
 
