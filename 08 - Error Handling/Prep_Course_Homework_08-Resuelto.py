@@ -1,61 +1,38 @@
-#!/usr/bin/env python
-# coding: utf-8
 
 # ## Manejo de errores
 
-
 # 1) Con la clase creada en el módulo 7, tener en cuenta diferentes casos en que el código pudiera arrojar error. Por ejemplo, en la creación del objeto recibimos una lista de números enteros pero ¿qué pasa si se envía otro tipo de dato?
-
-# In[1]:
-
 
 import sys
 sys.path.append(r'/C:/Users/lopez/Documents/Henry/Repos/Python-Prep/08 - Error Handling/herramientas.py')
 
 
-# In[2]:
-
-
 import herramientas as h
-
-
-# In[3]:
 
 
 h1 = h.Herramientas('hola')
 
 
-# In[4]:
-
-
 h1 = h.Herramientas([2,3,5,6,2])
 
 
+
+
 # 2) En la función que hace la conversión de grados, validar que los parámetros enviados sean los esperados, de no serlo, informar cuáles son los valores esperados.
-
-# In[5]:
-
 
 import importlib
 importlib.reload(h)
 
 
-# In[6]:
-
-
 h1 = h.Herramientas([2,3,5,6,2])
-
-
-# In[7]:
 
 
 h1.conversion_grados(1,2)
 
 
-# In[8]:
-
-
 h1.conversion_grados('celsius','farenheit')
+
+
 
 
 # 3) Importar el modulo "unittest" y crear los siguientes casos de pruebas sobre la clase utilizada en el punto 2<br>
@@ -65,13 +42,7 @@ h1.conversion_grados('celsius','farenheit')
 #
 # Se puede usar "raise ValueError()" en la creación de la clase para verificar el error. Investigar sobre esta funcionalidad.
 
-# In[9]:
-
-
 import unittest
-
-
-# In[11]:
 
 
 class ProbandoMiClase(unittest.TestCase):
@@ -96,24 +67,19 @@ class ProbandoMiClase(unittest.TestCase):
         self.assertEqual(moda, resultado)
 
 
-# In[12]:
-
-
 unittest.main(argv=[''], verbosity=2, exit=False)
+
+
 
 
 # 4) Probar una creación incorrecta y visualizar la salida del "raise"
 
-# In[13]:
-
-
 h2 = h.Herramientas('algo')
 
 
+
+
 # 6) Agregar casos de pruebas para el método verifica_primos() realizando el cambio en la clase, para que devuelva una lista de True o False en función de que el elemento en la posisicón sea o no primo
-
-# In[14]:
-
 
 class ProbandoMiClase2(unittest.TestCase):
 
@@ -125,22 +91,15 @@ class ProbandoMiClase2(unittest.TestCase):
         self.assertEqual(primos, primos_esperado)
 
 
-# In[15]:
-
-
 importlib.reload(h)
-
-
-# In[16]:
 
 
 unittest.main(argv=[''], verbosity=2, exit=False)
 
 
+
+
 # 7) Agregar casos de pruebas para el método conversion_grados()
-
-# In[17]:
-
 
 class ProbandoMiClase3(unittest.TestCase):
 
@@ -152,22 +111,15 @@ class ProbandoMiClase3(unittest.TestCase):
         self.assertEqual(grados, grados_esperado)
 
 
-# In[18]:
-
-
 importlib.reload(h)
-
-
-# In[19]:
 
 
 unittest.main(argv=[''], verbosity=2, exit=False)
 
 
+
+
 # 8) Agregar casos de pruebas para el método factorial()
-
-# In[20]:
-
 
 class ProbandoMiClase4(unittest.TestCase):
 
@@ -179,14 +131,15 @@ class ProbandoMiClase4(unittest.TestCase):
         self.assertEqual(factorial, factorial_esperado)
 
 
-# In[21]:
-
-
 importlib.reload(h)
 
 
-# In[22]:
-
-
 unittest.main(argv=[''], verbosity=2, exit=False)
+
+
+
+
+
+
+
 
