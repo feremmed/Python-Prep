@@ -11,6 +11,35 @@ def verifica_primo(nro):
             break
     return es_primo
 
+resultado = verifica_primo(11)
+print(resultado)
+# True
+
+
+
+
+nro=100
+es_primo = True
+for i in range(2, int(nro / 2) + 1 ):
+    if nro % i == 0:
+        es_primo = False
+        break
+if (es primo):
+    print('El número es primo')
+else:
+    print('El número no es primo')
+
+
+
+
+def verifica_primo(nro):
+    es_primo=True
+    for i in range(2, int(nro / 2) + 1 ):
+        if (nro % i == 0):
+            es_primo = False
+            break
+    return es_primo
+
 
 def verifica_primo(nro):
     es_primo = True

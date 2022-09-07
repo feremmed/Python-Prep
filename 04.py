@@ -187,9 +187,6 @@ lis # da la lista de z-a
 # "remove" quita cualquier elemento de la lista especificado y no retiene el valor
 lis.remove('Buenos Aires')
 
-
-
-
 # 14) Extraer el último elemento de la lista, guardarlo en una variable e imprimirlo
 
 # "pop" quita el último elemento de la lista, retiene el valor y puede ser utilizado
@@ -296,6 +293,8 @@ else:
 # 20) Mostrar la cantidad de veces que se encuentra un elemento específico dentro de la tupla y de la lista
 
 lis.count('Montevideo')
+# 2
+
 
 print(tup.count(10))
 print(lis.count('Montevideo'))
@@ -318,9 +317,14 @@ print(v1)
 print(v2)
 print(v3)
 
+v1
+# 1
 
+v2
+# 2
 
-
+v3
+# 3
 # 23) Crear un diccionario utilizando la lista crada en el punto 1, asignandole la clave "ciudad". Agregar tambien otras claves, como puede ser "Pais" y "Continente".
 
 dicc = {  'Ciudad': lis,
@@ -342,6 +346,125 @@ print(dicc.keys())
 # 25) Imprimir las ciudades a través de su clave
 
 print(dicc['Ciudad'])
+
+
+
+
+
+
+
+
+# Iteradores e iterables
+
+# Si tenemos un alista con varios valores, y queremos reccorrerla, podríamos resolverlo de la siguiente manera:
+
+lista = [5, 3, 9, 2]
+i = 0
+while i < len(lista):
+    elemento = lista[i]
+    print(elemento)
+    i += 1
+'''
+5
+4
+9
+2
+'''
+
+
+Sin embargo, contamos con una forma sencilla de resolverlo:
+
+lista = [5, 3, 9, 2]
+for elemento in lista:
+    print(elemento)
+'''
+5
+4
+9
+2
+'''
+
+
+cadena = "Hola"
+for c in cadena:
+    print(c)
+'''
+H
+o
+l
+a
+'''
+
+Algunas funcionalidades que podemos usar sobre elemento iterables:
+
+
+* sum()
+* join()
+* list()
+
+print(list("Hola"))
+# ['H', 'o', 'l', 'a']
+
+print(sum([1, 2, 3]))
+# 6
+
+print("-".join("Hola"))
+# H-o-l-a
+
+
+# Iteración sobre un diccionario:
+
+mi_dict = {'a':1, 'b':2, 'c':3}
+for i in mi_dict:
+    print(i)
+'''
+a
+b
+c
+'''
+
+# Un libro tiene diferentes páginas a las queUn libro tiene diferentes páginas a las que podemos acceder. Este libro podría ser una lista, y cada página un elemento de la lista. Por otro lado, el iterador sería un marcapáginas, es decir, una referencia que nos indica en qué posición estamos del libro, y que puede ser usado para "navergar" por él.
+
+# Se trata de un objeto que podemos usar para navegar a travéz del libro. Usando la función next() sobre el iterador, podemos ir accediendo secuencialmente a cada elemento de nuestra lista(las páginas del libro).
+
+libro = ['página1', 'página2', 'página3', 'página4']
+marcapaginas = iter(libro)
+print(next(marcapaginas))
+# página1
+
+# Dadas dos listas, digamos lista1 y lista2, al pasarlas a zip como entrada, el elemento 1 de lista1 se asocia con el elemento 1 de lista2, el elemento 2 de lista1 se asocia con el elemento 2 de lista2, el elemento 3 de lista1 se asocia con el elemento 3 de lista2, y así sucesivamente. Es decir que el resultado será una tupla donde cada elemento tendrá todos y cada uno de los elementos i-ésimos de las listas pasadas como entrada.
+
+a = [1, 2]
+b = ["Uno", "Dos"]
+c = zip(a, b)
+type(c)
+zip
+list(c)
+[(1, 'Uno'), (2, 'Dos')]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

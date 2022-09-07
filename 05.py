@@ -71,7 +71,6 @@ for i, e in enumerate(lista):
 
 lista = [1,2,5,7,8,10,13,14,15,17,20]
 
-
 n = 1
 while(n <= 20):
     if (not(n in lista)):
@@ -84,9 +83,8 @@ aux = 1
 while (aux <= 20):
     if (not(aux in lista)):
         #lista.append(aux)
-        lista.insert((aux - 1), aux)
+        lista.insert()
     aux += 1
-
 
 for aux in range (1, 21):
     if (not(aux in lista)):
