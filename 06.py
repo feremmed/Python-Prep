@@ -24,21 +24,12 @@ for i in range(2, int(nro / 2) + 1 ):
     if nro % i == 0:
         es_primo = False
         break
-if (es primo):
+if (es_primo):
     print('El número es primo')
 else:
     print('El número no es primo')
+# El número no es primo
 
-
-
-
-def verifica_primo(nro):
-    es_primo=True
-    for i in range(2, int(nro / 2) + 1 ):
-        if (nro % i == 0):
-            es_primo = False
-            break
-    return es_primo
 
 
 def verifica_primo(nro):
@@ -49,9 +40,6 @@ def verifica_primo(nro):
             break
     return es_primo
 
-
-
-
 # 2) Utilizando la función del punto 1, realizar otra función que reciba de parámetro una lista de números y devuelva sólo aquellos que son primos en otra lista
 
 lista1 = list(range(100,301))
@@ -59,6 +47,8 @@ lista2 = []
 for elemento in lista1:
     if (verifica_primo(elemento)):
         lista2.append(elemento)
+
+
 
 def crea_lista_primos(lista_valores):
     lista_primos = []
@@ -68,8 +58,29 @@ def crea_lista_primos(lista_valores):
     return lista_primos
 
 
-lista2 = (crea_lista_primos(list(range(10,21)))
+print(crea_lista_primos(list(range(10,21))))
 
+'''  ¡Funciona!
+
+def verifica_primo(nro):
+    es_primo=True
+    for i in range(2, int(nro / 2) + 1 ):
+        if (nro % i == 0):
+            es_primo = False
+            break
+    return es_primo
+
+def crea_lista_primos(lista_valores):
+    lista_primos = []
+    for elemento in lista_valores:
+        if (verifica_primo(elemento)):
+            lista_primos.append(elemento)
+    return lista_primos
+
+print(crea_lista_primos(list(range(10,21))))
+o
+lista = crea_lista_primos(list(range(10,21)))
+'''
 
 def extrae_primos_de_lista(lista):
     lista_primos = []
@@ -88,6 +99,24 @@ lis_primos
 
 
 # 3) Crear una función que al recibir una lista de números, devuelva el que más se repite y cuántas veces lo hace. Si hay más de un "más repetido", que devuelva cualquiera
+
+def max_repetido(lista2):
+    maximo = 0
+    num_max = 0
+    for num in lista2:
+        num_rept = lista2.count(num)
+        if num_rept > maximo:
+            maximo = num_rept
+            num_max = num
+    return num_max, maximo
+
+lista = [1,1,1,2,3,4,6,7,8,8]
+num_max, maximo = max_repetido(lista)
+
+print(f'El numero {num_max} es el elemento de la lista que mas veces se repite -> {maximo}')
+
+
+
 
 def valor_modal(lista):
     lista_unicos = []
@@ -108,7 +137,6 @@ def valor_modal(lista):
             moda = lista_unicos[i]
             maximo = lista_repeticiones[i]
     return moda, maximo
-
 
 lis = [1,1,5,6,8,10,22,5,6,4,11,9,5]
 moda, repite = valor_modal(lis)
@@ -227,8 +255,6 @@ for i in range(0,3):
 # 7) Armar una función que devuelva el factorial de un número. Tener en cuenta que el usuario puede equivocarse y enviar de parámetro un número no entero o negativo
 
 def factorial(numero):
-    if(type(numero) != int):
-        return 'El numero debe ser un entero'
     if(numero < 0):
         return 'El numero debe ser pisitivo'
     if (numero > 1):

@@ -51,6 +51,14 @@ for i in range(1, 21):
 
 for i in range(0, 6):
     print('Valor:', str(i), ' Elevado a la 3ra potencia:', str(i**3))
+'''
+Valor 0 Elevado a la 3ra potencia: 0
+Valor 1 Elevado a la 3ra potencia: 1
+Valor 2 Elevado a la 3ra potencia: 8
+Valor 3 Elevado a la 3ra potencia: 27
+Valor 4 Elevado a la 3ra potencia: 64
+Valor 5 Elevado a la 3ra potencia: 125
+'''
 
 
 
@@ -63,9 +71,50 @@ for i in range(0, n):
 print(i)
 
 
+n = 12
+for i in range(0, n):
+    print(i + 1)
+
 
 
 # 6) Utilizar un ciclo while para realizar el factoreo de un número guardado en una variable, sólo si la variable contiene un número entero mayor a 0
+
+factorial = 1
+if (type(a) == int):
+    if (a > 0):
+        while(a > 1):
+            factorial = factorial * a
+            a-=1
+    else:
+        print('La variable debe ser mayor a cero')
+else:
+    print('La variable debe ser un número entero')
+
+
+
+factorial = 1
+if (type(a) == int):
+    if (a > 0):
+        a_original = a
+        while(a > 1):
+            factorial = factorial * a
+            a-=1
+        print('El factorial de ', a_original, 'es', factorial)
+    else:
+        print('La variable debe ser mayor a cero')
+else:
+    print('La variable debe ser un número entero')
+
+
+
+
+a = 'hola'
+if ((type(a) > == int) and (a > 0)):
+    pass
+else:
+    print('La variable debe ser un número entero y mayor a cero')
+
+
 
 n = 5
 if (type(n) == int):
@@ -106,7 +155,6 @@ else:
 
 
 a = -2
-
 if (type(a) == int):
     if (a > 0):
         pass
@@ -120,7 +168,6 @@ else:
 
 
 a = '-2'
-
 if (a > 0):
     print(1)
 else:
@@ -128,28 +175,21 @@ else:
 # Error porque str
 
 # agregando {and} deberán cumplirse ambas condiciones
+
 if ((a > 0) and (type(a) == int)):
     pass
 else:
-    print('La variable debe ser un número entero mayor a cero')
+    print('La variable debe ser un número entero y mayor a cero')
 # Error porque pregunta mayor que antes que el tipo de dato
 
 
 if ((type(a) == int) and (a > 0)):
     pass
 else:
-    print('La variable debe ser un número entero mayor a cero')
+    print('La variable debe ser un número entero y mayor a cero')
 # No error porque pregunta tipo antes que mayor que
 
 ### Osea que; dependiendo del orden de consulta, fallará o no.
-
-a = 8
-
-factorial =1
-if (type(a) == int):
-    if (a > 0):
-        a_original = a
-        while(a > 1):
 
 
 
@@ -172,8 +212,8 @@ n = 5
 for i in range(1, n):
     while(n < 5):
         n -= 1
-        print('Ciclo while nro ' + str(n))
-        print('Ciclo for nro ' + str(i))
+    print('Ciclo while nro ' + str(n))
+    print('Ciclo for nro ' + str(i))
 
 
 

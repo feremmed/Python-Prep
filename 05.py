@@ -6,6 +6,7 @@ for elemento in range(-15,0):
     lista.append(elemento)
 
 
+
 lista = []
 n = -15
 while (n < 0):
